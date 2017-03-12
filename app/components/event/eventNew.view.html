@@ -2,18 +2,18 @@
   <md-content class="md-padding" layout="column">
   <md-input-container>
     <label>Descrição</label>
-    <input type="text"  ng-model="event.description" required>
+    <input type="text"  ng-model="newEvent.description" required>
   </md-input-container>
   <md-input-container>
     <label>Data e Hora</label>
-    <input type="text"  ng-model="event.datetime" required>
+    <input type="text"  ng-model="newEvent.datetime" required>
   </md-input-container>
   <md-input-container>
     <label>Anotações</label>
-    <input type="textarea"  ng-model="event.notes" required>
+    <input type="textarea"  ng-model="newEvent.notes" required>
   </md-input-container>
-  <md-button class="md-raised md-primary" ng-click="saveEvent()">
-    Salvar Evento
+  <md-button class="md-raised md-primary" ng-click="addEvent()">
+    Adicionar Evento
   </md-button>
   </md-content>
 </form>
