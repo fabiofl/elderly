@@ -9,15 +9,29 @@
 
 	<!--Custom CSS-->
     <link rel="stylesheet" href="assets/css/app.css"/>
-	
 	<base href="/">
 </head>
 <body>
-	<md-toolbar>
+	<md-toolbar md-theme="forest">
     	<h2 class="md-toolbar-tools">Elderly</h2>
 	</md-toolbar>
+	
+<!--   		<ng-show="isAuth">
+			<md-nav-bar
+		    md-selected-nav-item="currentNavItem"
+		    nav-bar-aria-label="navigation links">
+		    <md-nav-item md-nav-click="goto('events')" name="events">
+		      Diário
+		    </md-nav-item>
+		    <md-nav-item md-nav-click="goto('caregivers')" name="caregivers">
+		      Cuidadores
+		    </md-nav-item>
+		    </md-nav-bar>
+  		</ng-show> -->
 
-    <div ui-view></div>
+    <div ui-view>
+    	
+    </div>
 
     <!-- Angular Material requires Angular.js Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
@@ -54,6 +68,7 @@
 	<script src="components/home/home.controller.js"></script>
 	<script src="components/diary/diary.controller.js"></script>
 	<script src="components/event/event.controller.js"></script>
+	<script src="components/caregiver/caregiver.controller.js"></script>
 
 </body>
 </html>

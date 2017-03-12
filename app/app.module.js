@@ -7,6 +7,7 @@
     'elderly.routes',
     'elderly.home',
     'elderly.diary',
-    'elderly.event'
+    'elderly.event',
+    'elderly.caregiver'
   ]);
 })();

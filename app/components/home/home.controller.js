@@ -1,7 +1,7 @@
 (function(){
 	angular.module('elderly.home', [])
 
-	.controller('HomeController', function($scope, $firebaseAuth, $state){
+	.controller('HomeController', function($scope, $firebaseAuth, $state, Auth){
 		$scope.login = function() {
 			var auth = $firebaseAuth();
 
@@ -14,5 +14,10 @@
 			});
 		}
 		
+		$scope.isAuth = false;
+		Auth.$requireSignIn().then(function() {
+			$scope.isAuth = true;
+	        $state.go('events');
+	    });
 	});
 })();

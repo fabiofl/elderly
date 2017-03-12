@@ -28,8 +28,24 @@
 			})
 			.state('addEvent', {
 				url: '/addEvent',
-				templateUrl: 'components/event/eventForm.view.html',
+				templateUrl: 'components/event/event.add.html',
 				controller: 'EventController',
+				data : {
+					authenticate: true
+				}
+			})
+			.state('caregiver', {
+				url: '/caregivers',
+				templateUrl: 'components/caregiver/caregiver.view.html',
+				controller: 'CaregiverController',
+				data : {
+					authenticate: true
+				}
+			})
+			.state('caregiver.detail', {
+				url: '/caregivers/{id}',
+				templateUrl: 'components/caregiver/caregiver.detail.html',
+				controller: 'CaregiverController',
 				data : {
 					authenticate: true
 				}

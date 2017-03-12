@@ -4,7 +4,8 @@
 	.controller('EventController', ['$scope', '$firebaseArray', '$state',
 		function($scope, $firebaseArray, $state){
 			var ref = firebase.database().ref('events');
-			var events = $firebaseArray(ref);
+			var events = $firebaseArray(ref.orderByChild('datetime'));
+			// events.reverse()
 
 	    	$scope.events = events;
 			$scope.newEvent = {};
