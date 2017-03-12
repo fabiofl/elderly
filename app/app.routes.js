@@ -34,6 +34,14 @@
 					authenticate: true
 				}
 			})
+            .state('saveEvent', {
+				url: '/saveEvent/:id',
+				templateUrl: 'components/event/event.add.html',
+				controller: 'EventController',
+				data : {
+					authenticate: true
+				}
+			})
 			.state('caregiver', {
 				url: '/caregivers',
 				templateUrl: 'components/caregiver/caregiver.view.html',
@@ -55,7 +63,7 @@
 
 	})
 	.run(function ($rootScope, $state, Auth) {
-		
+
 	    $rootScope.$on("$stateChangeStart", function(event, toState, toParams, fromState, fromParams, error) {
 	        // We can catch the error thrown when the $requireSignIn promise is rejected
 	        // and redirect the user back to the home page

@@ -15,8 +15,7 @@
    <div class="line"></div>
 
     <md-list flex>
-      
-      <md-list-item class="md-3-line" ng-repeat="item in events" ng-click="null">
+      <md-list-item class="md-3-line" ng-repeat="item in events" ng-click="eventRead(item)">
         <img ng-src="http://icons.iconarchive.com/icons/flat-icons.com/square/512/pill-icon.png" class="md-avatar" alt="{{item.type}}" />
         <div class="md-list-item-text" layout="column">
           <h3 >{{ item.description }}</h3>
@@ -37,7 +36,7 @@
     <md-fab-actions>
       <md-button aria-label="Twitter" class="md-fab md-raised md-mini"
                  ng-click=eventNew()>
-        <md-icon md-font-set="material-icons"> local_hospital </md-icon>
+        <md-icon md-font-set="material-icons"> location_on </md-icon>
       </md-button>
       <md-button aria-label="Facebook" class="md-fab md-raised md-mini"
                  ng-click="goCaregivers()">
