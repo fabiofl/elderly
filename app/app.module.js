@@ -4,6 +4,7 @@
   angular.module('elderly', [
   	'ngMaterial',
     'elderly.routes',
-    'elderly.home'
+    'elderly.home',
+    'elderly.diary'
   ]);
 })();
