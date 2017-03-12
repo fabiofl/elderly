@@ -4,8 +4,14 @@
 	<meta charset="UTF-8">
 	<title>Elderly</title>
 
-	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="yes" />
+
+	<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+	<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
 
 	<!--Custom CSS-->
     <link rel="stylesheet" href="assets/css/app.css"/>
@@ -13,7 +19,17 @@
 </head>
 <body>
 	<md-toolbar md-theme="forest">
-    	<h2 class="md-toolbar-tools">Elderly</h2>
+	<div class="md-toolbar-tools">
+	<md-button ng-show="showBack" ng-click="goBack('events')">
+	<md-icon md-font-set="material-icons"> chevron_left </md-icon>
+	voltar
+    	
+    </md-button>
+      <h2 md-truncate flex>Elderly</h2>
+
+      
+    </div>
+    	
 	</md-toolbar>
 	
 <!--   		<ng-show="isAuth">
@@ -34,17 +50,17 @@
     </div>
 
     <!-- Angular Material requires Angular.js Libraries -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-animate.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-aria.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-messages.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-animate.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-aria.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-messages.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
 
 	<!-- Angular Material Library -->
-	<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
 
 	<!-- Initialize Firebase -->
-	<script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+	<script src="//www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
 	<script>
 	  var config = {
 	    apiKey: "AIzaSyA-genb0R-kG4JDFfiqyHmloGEK-i6YeU8",
@@ -57,7 +73,7 @@
 	</script>
 
 	<!-- AngularFire -->
-	<script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+	<script src="//cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
 
 	<!-- APP -->
 	<script src="app.module.js"></script>

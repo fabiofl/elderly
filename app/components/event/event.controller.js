@@ -15,6 +15,10 @@
 				$state.go('addEvent');
 			}
 
+			$scope.goCaregivers = function() {
+				$state.go('caregiver');
+			}
+
 	    	$scope.addEvent = function() {
 	    		
 	    		ref.push().set($scope.newEvent).then(function(){
