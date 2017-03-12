@@ -1,1 +1,25 @@
-Diário
+<md-content>
+<style>
+    .line{
+        background: #7986CB;
+        width: 2px;
+        position: absolute;
+        left: 35px;
+        height: 100%;
+    }
+</style>
+ <div class="line"></div>
+  <md-list flex>
+    
+    <md-list-item class="md-3-line" ng-repeat="item in list" ng-click="null">
+      <img ng-src="http://placehold.it/60x60" class="md-avatar" alt="{{item.type}}" />
+      <div class="md-list-item-text" layout="column">
+        <h3 >{{ item.description }}</h3>
+        <h4>{{ item.notes }}</h4>
+        <p>{{ item.datetime }}</p>
+      </div>
+    </md-list-item>
+
+    </md-list>
+</md-content>
+        
