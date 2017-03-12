@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-br" ng-app="elderly">
+<head>
+	<meta charset="UTF-8">
+	<title>Elderly</title>
+
+	<!--Custom CSS-->
+    <link rel="stylesheet" href="assets/css/app.css"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyA-genb0R-kG4JDFfiqyHmloGEK-i6YeU8",
+	    authDomain: "elderly-a7ff6.firebaseapp.com",
+	    databaseURL: "https://elderly-a7ff6.firebaseio.com",
+	    storageBucket: "elderly-a7ff6.appspot.com",
+	    messagingSenderId: "54588336717"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+</head>
+<body>
+    <div ui-view></div>
+
+	<!-- APP -->
+	<script src="app.module.js"></script>
+	<script src="app.routes.js"></script>
+
+	<!-- Controllers -->
+	<script src="components/home/home.controller.js"></script>
+
+    <!--landing module-->
+    <!-- <script src="app/landing/landing.module.js"></script> -->
+    <!-- <script src="app/landing/config.route.js"></script> -->
+</body>
+</html>
