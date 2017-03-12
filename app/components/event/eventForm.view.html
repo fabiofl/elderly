@@ -4,6 +4,14 @@
     <label>Descrição</label>
     <input type="text"  ng-model="newEvent.description" required>
   </md-input-container>
+  <md-input-container>
+    <label>Data e Hora</label>
+    <input type="text"  ng-model="newEvent.datetime" required>
+  </md-input-container>
+  <md-input-container>
+    <label>Anotações</label>
+    <input type="textarea"  ng-model="newEvent.notes" required>
+  </md-input-container>
   <md-button class="md-raised md-primary" ng-click="addEvent()">
     Adicionar Evento
   </md-button>
