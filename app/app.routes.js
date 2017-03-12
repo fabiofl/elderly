@@ -18,6 +18,14 @@
 					authenticate: true
 				}
 			})
+			.state('events', {
+				url: '/events',
+				templateUrl: 'components/event/events.view.html',
+				controller: 'EventController',
+				data : {
+					authenticate: true
+				}
+			})
 			.state('addEvent', {
 				url: '/addEvent',
 				templateUrl: 'components/event/eventForm.view.html',

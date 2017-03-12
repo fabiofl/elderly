@@ -5,6 +5,7 @@
 		var ref = firebase.database().ref('events');
 		var events = $firebaseArray(ref);
 
+    	$scope.events = events;
 		$scope.newEvent = {};
 
     	$scope.addEvent = function() {
@@ -13,4 +14,5 @@
     		
     	}
 	}]);
+
 })();
